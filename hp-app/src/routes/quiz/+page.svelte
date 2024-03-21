@@ -1,25 +1,25 @@
-<script src="logic.js"></script>
-
+<script>
+	import { handleSelection, handleSelection2 } from './logic.js';
+</script>
+	
 <div class="container h-full mx-auto flex justify-center items-center mt-20 md:mt-20">
 	<div class="bg-slate-300 p-6 rounded-lg shadow-lg h-full lg:w-5/12">
-		<div
-			class="card bg-gradient-to-br from-orange-500 via-blue-500 to-indigo-500 varient-gradient-tertiary-primary p-4 mb-4"
-		>
+		<div class="card bg-gradient-to-br from-orange-500 via-blue-500 to-indigo-500 varient-gradient-tertiary-primary p-4 mb-4">
 			<div class="card-header border-b text-center font-semibold text-lg">
 				Pick an animal you would befriend
 			</div>
 			<div class="card-body ml-5 mt-3 p-3">
 				<label class="font-semibold text-base">
-					<input type="radio" name="animal" value="Lion" /> Lion
+					<input type="radio" name="animal" value="Lion" on:change={handleSelection}/> Lion
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="animal" value="Snake" /> Snake
+					<input type="radio" name="animal" value="Snake" on:change={handleSelection}/> Snake
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="animal" value="Eagle" /> Eagle
+					<input type="radio" name="animal" value="Eagle" on:change={handleSelection}/> Eagle
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="animal" value="Badger" /> Badger
+					<input type="radio" name="animal" value="Badger" on:change={handleSelection}/> Badger
 				</label>
 			</div>
 		</div>
@@ -31,16 +31,16 @@
 			</div>
 			<div class="card-body ml-5 mt-3 p-3">
 				<label class="font-semibold text-base">
-					<input type="radio" name="power" value="help" /> Have healing/herbal powers (helping people)
+					<input type="radio" name="power" value="Have healing/herbal powers (helping people)" on:change={handleSelection2}/> Have healing/herbal powers (helping people)
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="power" value="trick" /> Have illusion powers (trick people)
+					<input type="radio" name="power" value="Have illusion powers (trick people)" on:change={handleSelection2}/> Have illusion powers (trick people)
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="power" value="fight" /> Have brute powers (fighting people)
+					<input type="radio" name="power" value="Have brute powers (fighting people)" on:change={handleSelection2}/> Have brute powers (fighting people)
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="power" value="sports" /> Have physical powers (sports and strength)
+					<input type="radio" name="power" value="Have physical powers (sports and strength)" on:change={handleSelection2}/> Have physical powers (sports and strength)
 				</label>
 			</div>
 		</div>
@@ -166,7 +166,7 @@
 						alt="A GIF of Snape"
 						class="rounded-lg border border-white border-2"
 					/>
-					Severus Snape
+					Albus Dumbledore
 				</div>
 				<div class="mx-2"></div>
 				<!-- This is the added gap -->
@@ -179,9 +179,51 @@
 						alt="A GIF of Hagrid"
 						class="rounded-lg border border-white border-2"
 					/>
-					Rubeus Hagrid
+					Voldemort
 				</div>
 			</div>
 		</div>
+		<div
+			class="card bg-gradient-to-br from-red-500 via-green-500 to-blue-500 varient-gradient-tertiary-primary p-4 mb-4 h-[450px]"
+		>
+			<div class="card-header border-b text-center font-semibold text-lg">
+				In the Goblet of Fire tournament, which wizard challenge was your favorite?
+			</div>
+			<div class="card-body ml-5 mt-3 p-3">
+				<label class="font-semibold text-base">
+					<input type="radio" name="challenge" value="dumbledore" /> The Dragon and the Egg
+				</label><br />
+				<label class="font-semibold text-base">
+					<input type="radio" name="challenge" value="voldemort" /> The Maze
+				</label><br />
+				<label class="font-semibold text-base">
+					<input type="radio" name="challenge" value="voldemort" /> The Black Lake
+				</label><br />
+			</div>
+			<div class="flex w-full">
+				<div class="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">
+					<img
+						src="/maze.jpg"
+						alt="A GIF of Snape"
+						class="rounded-lg border border-white border-2"
+					/>
+				</div>
+				<div class="mx-2"></div>
+				<!-- This is the added gap -->
+				<div class="divider divider-horizontal"></div>
+				<div class="mx-2"></div>
+				<!-- This is the added gap -->
+				<div class="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">
+					<img
+						src="/dragon.jpeg"
+						alt="A GIF of Hagrid"
+						class="rounded-lg border border-white border-2"
+					/>
+				</div>
+			</div>
+		</div>
+		<a class="block card card-hover p-4 w-3/6 text-center hover:bg-green-300 mx-auto variant-filled-success" href="/elements/cards">Submit Quiz</a>
+
+
 	</div>
 </div>
