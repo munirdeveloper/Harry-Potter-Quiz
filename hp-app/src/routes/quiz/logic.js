@@ -244,3 +244,29 @@ export function handleSelection8(event) {
             console.log("Invalid selection");
     }
 }
+
+// getting the maximum score now
+
+export function getMaxScore() {
+    let maxScore;
+
+    if (gryffCnt >= slythCnt && gryffCnt >= ravCnt && gryffCnt >= HuffCnt) {
+        maxScore = gryffCnt;
+        console.log("You are Gryffindor! Points: " + gryffCnt);
+    }
+
+    if (slythCnt >= gryffCnt && slythCnt >= ravCnt && slythCnt >= HuffCnt) {
+        maxScore = slythCnt;
+        console.log("You are Slytherin! Points: " + slythCnt);
+    }
+
+    if (ravCnt >= gryffCnt && ravCnt >= slythCnt && ravCnt >= HuffCnt) {
+        maxScore = ravCnt;
+        console.log("You are Ravenclaw! Points: " + ravCnt);
+    }
+
+    if (HuffCnt >= gryffCnt && HuffCnt >= slythCnt && HuffCnt >= ravCnt) {
+        maxScore = HuffCnt;
+        console.log("You are Hufflepuff! Points: " + HuffCnt);
+    }
+}

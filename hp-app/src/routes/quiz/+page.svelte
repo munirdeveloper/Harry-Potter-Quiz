@@ -7,8 +7,15 @@
 		handleSelection5,
 		handleSelection6,
 		handleSelection7,
-		handleSelection8
+		handleSelection8,
+		getMaxScore
 	} from './logic.js';
+
+	let maxScore = 0;
+
+	function calculateMaxScore() {
+		maxScore = getMaxScore(); // Call getMaxScore function and update maxScore
+	}
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center mt-20 md:mt-20">
@@ -265,7 +272,7 @@
 		</div>
 		<a
 			class="block card card-hover p-4 w-3/6 text-center hover:bg-green-300 mx-auto variant-filled-success"
-			href="/elements/cards">Submit Quiz</a
+			on:click={calculateMaxScore}>Submit Quiz</a
 		>
 	</div>
 </div>
