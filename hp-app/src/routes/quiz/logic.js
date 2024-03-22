@@ -72,11 +72,10 @@ export function handleSelection(event) {
 // QUESTION 2
 
 export function handleSelection2(event) {
-    const selectedAnimal = event.target.value;
+    const selectedPower = event.target.value;
     const question = event.target.name;
 
-    // Check the selected animal and increment count accordingly
-    switch (selectedAnimal) {
+    switch (selectedPower) {
         case 'Have brute powers (fighting people)':
             console.log("Selected fight - Gryffindor");
             increGryff(question); // Increment count for Gryffindor
@@ -92,6 +91,154 @@ export function handleSelection2(event) {
         case 'Have healing/herbal powers (helping people)':
             console.log("Selected help - Hufflepuff");
             increHuff(question); // Increment count for Hufflepuff
+            break;
+        default:
+            console.log("Invalid selection");
+    }
+}
+
+// QUESTION 3
+
+export function handleSelection3(event) {
+    const selectedColor = event.target.value;
+    const question = event.target.name;
+
+    switch (selectedColor) {
+        case 'Red':
+            console.log("Selected fight - Gryffindor");
+            increGryff(question); // Increment count for Gryffindor
+            break;
+        case 'Green':
+            console.log("Selected trick - Slytherin");
+            increSlyth(question); // Increment count for Slytherin
+            break;
+        case 'Blue':
+            console.log("Selected sport - Ravenclaw");
+            increRav(question); // Increment count for Ravenclaw
+            break;
+        case 'Yellow':
+            console.log("Selected help - Hufflepuff");
+            increHuff(question); // Increment count for Hufflepuff
+            break;
+        default:
+            console.log("Invalid selection");
+    }
+}
+
+// QUESTION 4
+
+export function handleSelection4(event) {
+    const selectedChar = event.target.value;
+    const question = event.target.name;
+
+    switch (selectedChar) {
+        case 'Hagrid':
+            console.log("Selected fight - Gryffindor");
+            increGryff(question); // Increment count for Gryffindor
+            break;
+        case 'Snape':
+            console.log("Selected trick - Slytherin");
+            increSlyth(question); // Increment count for Slytherin
+            break;
+        default:
+            console.log("Invalid selection");
+    }
+}
+
+// QUESTION 5
+
+export function handleSelection5(event) {
+    const selectedTrait = event.target.value;
+    const question = event.target.name;
+
+    switch (selectedTrait) {
+        case 'Ambition':
+            console.log("Selected fight - Gryffindor");
+            increGryff(question); // Increment count for Gryffindor
+            break;
+        case 'Loyalty':
+            console.log("Selected trick - Slytherin");
+            increSlyth(question); // Increment count for Slytherin
+            break;
+        case 'Courage':
+            console.log("Selected sport - Ravenclaw");
+            increRav(question); // Increment count for Ravenclaw
+            break;
+        case 'Intelligence':
+            console.log("Selected help - Hufflepuff");
+            increHuff(question); // Increment count for Hufflepuff
+            break;
+        default:
+            console.log("Invalid selection");
+    }
+}
+
+// QUESTION 6
+
+export function handleSelection6(event) {
+    const selectedPet = event.target.value;
+    const question = event.target.name;
+
+    switch (selectedPet) {
+        case 'Owl':
+            console.log("Selected fight - Gryffindor");
+            increGryff(question); // Increment count for Gryffindor
+            break;
+        case 'Rat':
+            console.log("Selected trick - Slytherin");
+            increSlyth(question); // Increment count for Slytherin
+            break;
+        case 'Frog':
+            console.log("Selected sport - Ravenclaw");
+            increRav(question); // Increment count for Ravenclaw
+            break;
+        case 'Cat':
+            console.log("Selected help - Hufflepuff");
+            increHuff(question); // Increment count for Hufflepuff
+            break;
+        default:
+            console.log("Invalid selection");
+    }
+}
+
+// QUESTION 7
+
+export function handleSelection7(event) {
+    const selectedHero = event.target.value;
+    const question = event.target.name;
+
+    switch (selectedHero) {
+        case 'Dumbledore':
+            console.log("Selected fight - Gryffindor");
+            increGryff(question); // Increment count for Gryffindor
+            break;
+        case 'Voldemort':
+            console.log("Selected trick - Slytherin");
+            increSlyth(question); // Increment count for Slytherin
+            break;
+        default:
+            console.log("Invalid selection");
+    }
+}
+
+// QUESTION 8
+
+export function handleSelection8(event) {
+    const selectedGame = event.target.value;
+    const question = event.target.name;
+
+    switch (selectedGame) {
+        case 'The Dragon and the Egg':
+            console.log("Selected fight - Gryffindor");
+            increGryff(question); // Increment count for Gryffindor
+            break;
+        case 'The Maze':
+            console.log("Selected trick - Slytherin");
+            increSlyth(question); // Increment count for Slytherin
+            break;
+        case 'The Black Lake':
+            console.log("Selected sport - Ravenclaw");
+            increRav(question); // Increment count for Ravenclaw
             break;
         default:
             console.log("Invalid selection");

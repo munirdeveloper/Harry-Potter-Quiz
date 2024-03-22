@@ -1,25 +1,36 @@
 <script>
-	import { handleSelection, handleSelection2 } from './logic.js';
+	import {
+		handleSelection,
+		handleSelection2,
+		handleSelection3,
+		handleSelection4,
+		handleSelection5,
+		handleSelection6,
+		handleSelection7,
+		handleSelection8
+	} from './logic.js';
 </script>
-	
+
 <div class="container h-full mx-auto flex justify-center items-center mt-20 md:mt-20">
 	<div class="bg-slate-300 p-6 rounded-lg shadow-lg h-full lg:w-5/12">
-		<div class="card bg-gradient-to-br from-orange-500 via-blue-500 to-indigo-500 varient-gradient-tertiary-primary p-4 mb-4">
+		<div
+			class="card bg-gradient-to-br from-orange-500 via-blue-500 to-indigo-500 varient-gradient-tertiary-primary p-4 mb-4"
+		>
 			<div class="card-header border-b text-center font-semibold text-lg">
 				Pick an animal you would befriend
 			</div>
 			<div class="card-body ml-5 mt-3 p-3">
 				<label class="font-semibold text-base">
-					<input type="radio" name="animal" value="Lion" on:change={handleSelection}/> Lion
+					<input type="radio" name="animal" value="Lion" on:change={handleSelection} /> Lion
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="animal" value="Snake" on:change={handleSelection}/> Snake
+					<input type="radio" name="animal" value="Snake" on:change={handleSelection} /> Snake
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="animal" value="Eagle" on:change={handleSelection}/> Eagle
+					<input type="radio" name="animal" value="Eagle" on:change={handleSelection} /> Eagle
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="animal" value="Badger" on:change={handleSelection}/> Badger
+					<input type="radio" name="animal" value="Badger" on:change={handleSelection} /> Badger
 				</label>
 			</div>
 		</div>
@@ -31,16 +42,36 @@
 			</div>
 			<div class="card-body ml-5 mt-3 p-3">
 				<label class="font-semibold text-base">
-					<input type="radio" name="power" value="Have healing/herbal powers (helping people)" on:change={handleSelection2}/> Have healing/herbal powers (helping people)
+					<input
+						type="radio"
+						name="power"
+						value="Have healing/herbal powers (helping people)"
+						on:change={handleSelection2}
+					/> Have healing/herbal powers (helping people)
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="power" value="Have illusion powers (trick people)" on:change={handleSelection2}/> Have illusion powers (trick people)
+					<input
+						type="radio"
+						name="power"
+						value="Have illusion powers (trick people)"
+						on:change={handleSelection2}
+					/> Have illusion powers (trick people)
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="power" value="Have brute powers (fighting people)" on:change={handleSelection2}/> Have brute powers (fighting people)
+					<input
+						type="radio"
+						name="power"
+						value="Have brute powers (fighting people)"
+						on:change={handleSelection2}
+					/> Have brute powers (fighting people)
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="power" value="Have physical powers (sports and strength)" on:change={handleSelection2}/> Have physical powers (sports and strength)
+					<input
+						type="radio"
+						name="power"
+						value="Have physical powers (sports and strength)"
+						on:change={handleSelection2}
+					/> Have physical powers (sports and strength)
 				</label>
 			</div>
 		</div>
@@ -52,16 +83,16 @@
 			</div>
 			<div class="card-body ml-5 mt-3 p-3">
 				<label class="font-semibold text-base">
-					<input type="radio" name="color" value="green" /> Green
+					<input type="radio" name="color" value="Green" on:change={handleSelection3} /> Green
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="color" value="red" /> Red
+					<input type="radio" name="color" value="Red" on:change={handleSelection3} /> Red
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="color" value="blue" /> Blue
+					<input type="radio" name="color" value="Blue" on:change={handleSelection3} /> Blue
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="color" value="yellow" /> Yellow
+					<input type="radio" name="color" value="Yellow" on:change={handleSelection3} /> Yellow
 				</label>
 			</div>
 		</div>
@@ -73,10 +104,10 @@
 			</div>
 			<div class="card-body ml-5 mt-3 p-3">
 				<label class="font-semibold text-base">
-					<input type="radio" name="SnapeOrHagrid" value="snape" /> Snape
+					<input type="radio" name="SnapeOrHagrid" value="Snape" on:change={handleSelection4} /> Snape
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="SnapeOrHagrid" value="hagrid" /> Hagrid
+					<input type="radio" name="SnapeOrHagrid" value="Hagrid" on:change={handleSelection4} /> Hagrid
 				</label><br />
 			</div>
 			<div class="flex w-full">
@@ -111,16 +142,16 @@
 			</div>
 			<div class="card-body ml-5 mt-3 p-3">
 				<label class="font-semibold text-base">
-					<input type="radio" name="trait" value="intelligence" /> Intelligence
+					<input type="radio" name="trait" value="Intelligence" on:change={handleSelection5} /> Intelligence
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="trait" value="courage" /> Courage
+					<input type="radio" name="trait" value="Courage" on:change={handleSelection5} /> Courage
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="trait" value="ambition" /> Ambition
+					<input type="radio" name="trait" value="Ambition" on:change={handleSelection5} /> Ambition
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="trait" value="loyalty" /> Loyalty
+					<input type="radio" name="trait" value="Loyalty" on:change={handleSelection5} /> Loyalty
 				</label>
 			</div>
 		</div>
@@ -132,16 +163,16 @@
 			</div>
 			<div class="card-body ml-5 mt-3 p-3">
 				<label class="font-semibold text-base">
-					<input type="radio" name="pet" value="owl" /> Owl
+					<input type="radio" name="pet" value="Owl" on:change={handleSelection6} /> Owl
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="pet" value="cat" /> Cat
+					<input type="radio" name="pet" value="Cat" on:change={handleSelection6} /> Cat
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="pet" value="frog" /> Frog
+					<input type="radio" name="pet" value="Frog" on:change={handleSelection6} /> Frog
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="pet" value="rat" /> Rat
+					<input type="radio" name="pet" value="Rat" on:change={handleSelection6} /> Rat
 				</label>
 			</div>
 		</div>
@@ -153,10 +184,10 @@
 			</div>
 			<div class="card-body ml-5 mt-3 p-3">
 				<label class="font-semibold text-base">
-					<input type="radio" name="hero" value="dumbledore" /> Dumbledore
+					<input type="radio" name="hero" value="Dumbledore" on:change={handleSelection7} /> Dumbledore
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="hero" value="voldemort" /> Voldemort
+					<input type="radio" name="hero" value="Voldemort" on:change={handleSelection7} /> Voldemort
 				</label><br />
 			</div>
 			<div class="flex w-full">
@@ -191,13 +222,23 @@
 			</div>
 			<div class="card-body ml-5 mt-3 p-3">
 				<label class="font-semibold text-base">
-					<input type="radio" name="challenge" value="dumbledore" /> The Dragon and the Egg
+					<input
+						type="radio"
+						name="challenge"
+						value="The Dragon and the Egg"
+						on:change={handleSelection8}
+					/> The Dragon and the Egg
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="challenge" value="voldemort" /> The Maze
+					<input type="radio" name="challenge" value="The Maze" on:change={handleSelection8} /> The Maze
 				</label><br />
 				<label class="font-semibold text-base">
-					<input type="radio" name="challenge" value="voldemort" /> The Black Lake
+					<input
+						type="radio"
+						name="challenge"
+						value="The Black Lake"
+						on:change={handleSelection8}
+					/> The Black Lake
 				</label><br />
 			</div>
 			<div class="flex w-full">
@@ -222,8 +263,9 @@
 				</div>
 			</div>
 		</div>
-		<a class="block card card-hover p-4 w-3/6 text-center hover:bg-green-300 mx-auto variant-filled-success" href="/elements/cards">Submit Quiz</a>
-
-
+		<a
+			class="block card card-hover p-4 w-3/6 text-center hover:bg-green-300 mx-auto variant-filled-success"
+			href="/elements/cards">Submit Quiz</a
+		>
 	</div>
 </div>
