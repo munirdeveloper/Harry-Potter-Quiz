@@ -252,22 +252,22 @@ export function calculateMaxScore() {
 
     if (gryffCnt >= slythCnt && gryffCnt >= ravCnt && gryffCnt >= HuffCnt) {
         maxScore = gryffCnt;
-        console.log("You are Gryffindor! Points: " + gryffCnt);
+        console.log("The Sorting Hat puts you in Gryffindor!");
     }
 
     if (slythCnt >= gryffCnt && slythCnt >= ravCnt && slythCnt >= HuffCnt) {
         maxScore = slythCnt;
-        console.log("You are Slytherin! Points: " + slythCnt);
+        console.log("The Sorting Hat puts you in Slytherin!");
     }
 
     if (ravCnt >= gryffCnt && ravCnt >= slythCnt && ravCnt >= HuffCnt) {
         maxScore = ravCnt;
-        console.log("You are Ravenclaw! Points: " + ravCnt);
+        console.log("The Sorting Hat puts you in Ravenclaw!");
     }
 
     if (HuffCnt >= gryffCnt && HuffCnt >= slythCnt && HuffCnt >= ravCnt) {
         maxScore = HuffCnt;
-        console.log("You are Hufflepuff! Points: " + HuffCnt);
+        console.log("The Sorting Hat puts you in Hufflepuff!");
     }
 
     return maxScore;
@@ -289,7 +289,48 @@ export function validateForm() {
 
 export function handleFormSubmission() {
     if (validateForm()) {
-        calculateMaxScore();
-        document.getElementById('user_form').submit();
+        const maxScore = calculateMaxScore();
+        const userName = document.getElementById('user_name').value;
+        const message = document.createElement('p');
+        message.textContent = "The Sorting Hat puts " + userName + " in " + getHouseName(maxScore) + "!";
+        message.classList.add('text-center', 'text-2xl', 'font-semibold', 'mt-8');
+        document.getElementById('user_form').appendChild(message);
+        document.getElementById('user_form').reset(); 
+
+        // Create and append image element for the house logo
+        const houseLogo = document.createElement('img');
+        houseLogo.classList.add('mx-auto', 'mt-4', 'outline', 'outline-blue-500', 'ring', 'ring-offset-2', 'rounded-lg'); 
+        houseLogo.alt = "House Logo";
+        houseLogo.src = getHouseLogo(maxScore); // Get the path of the respective house logo
+        document.getElementById('user_form').appendChild(houseLogo);
+
+        document.getElementById('user_form').reset(); // Reset the form
+    }
+}   
+
+function getHouseName(score) {
+    if (score === gryffCnt) {
+        return "Gryffindor";
+    } else if (score === slythCnt) {
+        return "Slytherin";
+    } else if (score === ravCnt) {
+        return "Ravenclaw";
+    } else if (score === HuffCnt) {
+        return "Hufflepuff";
+    }
+}
+
+function getHouseLogo(score) {
+    switch (score) {
+        case gryffCnt:
+            return "/gryffindor_logo.jpg";
+        case slythCnt:
+            return "/slytherin_logo.png";
+        case ravCnt:
+            return "/ravenclaw_logo.png";
+        case HuffCnt:
+            return "/hufflepuff_logo.jpg";
+        default:
+            return ""; // Return empty string if no matching logo found
     }
 }
