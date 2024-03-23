@@ -34,7 +34,8 @@ export default {
                 preset: ["skeleton", "modern", "crimson", "vintage", "gold-nouveau", "hamlindigo", "sahara", "wintry", "rocket", "seafoam"]
             },
         }),
-        require('stwui/plugin'), // Add this line to include the stwui plugin
+        require('stwui/plugin'), 
+        require('@tailwindcss/forms'),
         flowbite(),
     ],
     daisyui: {

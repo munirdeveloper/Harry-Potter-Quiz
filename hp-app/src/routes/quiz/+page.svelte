@@ -8,13 +8,14 @@
 		handleSelection6,
 		handleSelection7,
 		handleSelection8,
-		getMaxScore
+		handleFormSubmission,
+		validateForm
 	} from './logic.js';
 
 	let maxScore = 0;
 
 	function calculateMaxScore() {
-		maxScore = getMaxScore(); // Call getMaxScore function and update maxScore
+		maxScore = getMaxScore();
 	}
 </script>
 
@@ -270,9 +271,28 @@
 				</div>
 			</div>
 		</div>
-		<a
-			class="block card card-hover p-4 w-3/6 text-center hover:bg-green-300 mx-auto variant-filled-success"
-			on:click={calculateMaxScore}>Submit Quiz</a
-		>
+		<div class="card p-4">
+			<form action="" id="user_form">
+				<label class="label mb-5">
+					<span>Enter your name</span>
+					<input class="input" id="user_name" type="text" placeholder="Bob" required />
+				</label>
+
+				<label class="label mb-5">
+					<span>Enter your age</span>
+					<input class="input" id="user_age" type="number" placeholder="25" required />
+				</label>
+
+				<label class="label">
+					<span>Do you like my website? I am open to suggestions/advice</span>
+					<textarea class="textarea" rows="4" placeholder="I like it! You could improve on .." />
+				</label>
+				<button
+					type="button"
+					class="block card card-hover p-4 mt-5 w-3/6 text-center hover:bg-green-300 mx-auto variant-filled-success"
+					on:click={handleFormSubmission}>Submit Quiz</button
+				>
+			</form>
+		</div>
 	</div>
 </div>

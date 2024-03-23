@@ -247,7 +247,7 @@ export function handleSelection8(event) {
 
 // getting the maximum score now
 
-export function getMaxScore() {
+export function calculateMaxScore() {
     let maxScore;
 
     if (gryffCnt >= slythCnt && gryffCnt >= ravCnt && gryffCnt >= HuffCnt) {
@@ -268,5 +268,28 @@ export function getMaxScore() {
     if (HuffCnt >= gryffCnt && HuffCnt >= slythCnt && HuffCnt >= ravCnt) {
         maxScore = HuffCnt;
         console.log("You are Hufflepuff! Points: " + HuffCnt);
+    }
+
+    return maxScore;
+}
+
+
+export function validateForm() {
+    var name = document.getElementById('user_name').value;
+    var age = document.getElementById('user_age').value;
+
+    if (name === '' || age === '') {
+        alert('Please fill in your name and age before submitting the form.');
+        return false;
+    } else {
+        // Proceed with form submission
+        return true;
+    }
+}
+
+export function handleFormSubmission() {
+    if (validateForm()) {
+        calculateMaxScore();
+        document.getElementById('user_form').submit();
     }
 }
