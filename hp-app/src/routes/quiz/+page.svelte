@@ -1,4 +1,8 @@
 <script>
+	let user_age = '';
+	let user_name = '';
+	let user_feedback = '';
+
 	import {
 		handleSelection,
 		handleSelection2,
@@ -272,23 +276,43 @@
 			</div>
 		</div>
 		<div class="card p-4">
-			<form action="" id="user_form">
+			<form method="POST" action="?/submission">
 				<label class="label mb-5">
 					<span>Enter your name</span>
-					<input class="input" id="user_name" type="text" placeholder="Bob" required />
+					<input
+						class="input"
+						name="user_name"
+						id="user_name"
+						type="text"
+						placeholder="Bob"
+						required
+					/>
 				</label>
 
 				<label class="label mb-5">
 					<span>Enter your age</span>
-					<input class="input" id="user_age" type="number" placeholder="25" required />
+					<input
+						class="input"
+						name="user_age"
+						id="user_age"
+						type="number"
+						placeholder="25"
+						required
+					/>
 				</label>
 
 				<label class="label">
 					<span>Do you like my website? I am open to suggestions/advice</span>
-					<textarea class="textarea" rows="4" placeholder="I like it! You could improve on .." />
+					<textarea
+						class="textarea"
+						id="user_feedback"
+						name="user_feedback"
+						rows="4"
+						placeholder="I like it! You could improve on .."
+					/>
 				</label>
 				<button
-					type="button"
+					type="submit"
 					class="block card card-hover p-4 mt-5 w-3/6 text-center hover:bg-green-300 mx-auto variant-filled-success"
 					on:click={handleFormSubmission}>Submit Quiz</button
 				>

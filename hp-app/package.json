@@ -22,6 +22,7 @@
     "@tailwindcss/typography": "0.5.10",
     "@types/eslint": "^8.56.0",
     "@types/node": "20.11.28",
+    "@types/nodemailer": "^6.4.14",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
     "autoprefixer": "10.4.18",
@@ -47,7 +48,14 @@
   },
   "type": "module",
   "dependencies": {
+    "dotenv": "^16.4.5",
+    "nodemailer": "^6.9.13",
     "svelte-routing": "^2.12.0",
     "theme-change": "^2.5.0"
-  }
+  },
+  "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).",
+  "main": "svelte.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
