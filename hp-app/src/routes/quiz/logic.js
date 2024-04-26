@@ -331,6 +331,6 @@ function getHouseLogo(score) {
         case HuffCnt:
             return "/hufflepuff_logo.jpg";
         default:
-            return ""; // Return empty string if no matching logo found
+            return ""; 
     }
 }

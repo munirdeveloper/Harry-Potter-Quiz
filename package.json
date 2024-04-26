@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "vite": "^5.2.2",
+    "rollup": "^2.68.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "rollup -c",
+    "preview": "vite preview",
+    "deploy": "npx gh-pages -d dist"
+  }
+}
