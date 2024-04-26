@@ -276,7 +276,8 @@
 			</div>
 		</div>
 		<div class="card p-4">
-			<form method="POST" action="?/submission">
+			<!-- <form method="POST" action="?/submission"> -->
+			<form on:submit|preventDefault={handleFormSubmission} id="user_form">
 				<label class="label mb-5">
 					<span>Enter your name</span>
 					<input
@@ -315,7 +316,7 @@
 					type="submit"
 					class="block card card-hover p-4 mt-5 w-3/6 text-center hover:bg-green-300 mx-auto variant-filled-success"
 					on:click={handleFormSubmission}>Submit Quiz</button
-				>
+				>				
 			</form>
 		</div>
 	</div>

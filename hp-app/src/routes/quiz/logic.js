@@ -287,7 +287,30 @@ export function validateForm() {
     }
 }
 
-export function handleFormSubmission() {
+// export function handleFormSubmission() {
+
+//     if (validateForm()) {
+//         const maxScore = calculateMaxScore();
+//         const userName = document.getElementById('user_name').value;
+//         const message = document.createElement('p');
+//         message.textContent = "The Sorting Hat puts " + userName + " in " + getHouseName(maxScore) + "!";
+//         message.classList.add('text-center', 'text-2xl', 'font-semibold', 'mt-8');
+//         document.getElementById('user_form').appendChild(message);
+//         document.getElementById('user_form').reset(); 
+
+//         // Create and append image element for the house logo
+//         const houseLogo = document.createElement('img');
+//         houseLogo.classList.add('mx-auto', 'mt-4', 'outline', 'outline-blue-500', 'ring', 'ring-offset-2', 'rounded-lg'); 
+//         houseLogo.alt = "House Logo";
+//         houseLogo.src = getHouseLogo(maxScore); // Get the path of the respective house logo
+//         document.getElementById('user_form').appendChild(houseLogo);
+
+//         document.getElementById('user_form').reset(); // Reset the form
+//     }
+// }   
+export function handleFormSubmission(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
     if (validateForm()) {
         const maxScore = calculateMaxScore();
         const userName = document.getElementById('user_name').value;
@@ -306,7 +329,8 @@ export function handleFormSubmission() {
 
         document.getElementById('user_form').reset(); // Reset the form
     }
-}   
+}
+
 
 function getHouseName(score) {
     if (score === gryffCnt) {
@@ -317,7 +341,7 @@ function getHouseName(score) {
         return "Ravenclaw";
     } else if (score === HuffCnt) {
         return "Hufflepuff";
-    }
+    }   
 }
 
 function getHouseLogo(score) {
