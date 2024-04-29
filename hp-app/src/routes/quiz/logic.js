@@ -308,6 +308,7 @@ export function validateForm() {
 //         document.getElementById('user_form').reset(); // Reset the form
 //     }
 // }   
+
 export function handleFormSubmission(event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
@@ -330,7 +331,6 @@ export function handleFormSubmission(event) {
         document.getElementById('user_form').reset(); // Reset the form
     }
 }
-
 
 function getHouseName(score) {
     if (score === gryffCnt) {

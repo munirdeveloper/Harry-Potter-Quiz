@@ -316,7 +316,7 @@
 					type="submit"
 					class="block card card-hover p-4 mt-5 w-3/6 text-center hover:bg-green-300 mx-auto variant-filled-success"
 					on:click={handleFormSubmission}>Submit Quiz</button
-				>				
+				>
 			</form>
 		</div>
 	</div>
