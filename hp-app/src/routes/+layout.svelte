@@ -21,8 +21,8 @@
 			<div class="menu">
 				<li><a href="/">Home</a></li>
 				<li><a href="/quiz">Quiz</a></li>
-				<li><a href="/">Pricing</a></li>
-				<li><a href="/">Contact</a></li>
+				<li><a href="/houses">Houses</a></li>
+				<li><a href="/">Portfolio</a></li>
 			</div>
 		</ul>
 	</nav>
@@ -63,7 +63,8 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 20px;
-		background-color: black;
+		background-color: rgba(0, 0, 0, 0.7); /* Set background color with transparency */
+		backdrop-filter: blur(5px); /* Apply blur effect */
 		color: #fff;
 		position: fixed; /* Fixed position to stick to the top */
 		width: 100%; /* Full width */
@@ -92,10 +93,6 @@
 		transition: 0.3s ease;
 	}
 
-	.menu li {
-		padding: 5px 14px;
-	}
-
 	/* RESPONSIVE NAVBAR MENU STARTS */
 
 	/* CHECKBOX HACK */
@@ -121,12 +118,12 @@
 			right: 0;
 			left: 0;
 			text-align: center;
-			padding: 16px 0;
+			padding: 0;
+			margin: 0;
 		}
 
 		.menu li:hover {
 			display: inline-block;
-			background-color: black;
 			transition: 0.3s ease;
 		}
 
