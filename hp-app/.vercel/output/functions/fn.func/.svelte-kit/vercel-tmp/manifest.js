@@ -10,7 +10,7 @@ return {
 	assets: new Set(["albus.jpeg","bg-1.jpg","bg-2.jpg","bg-3.jpg","dragon.jpeg","favicon.png","fonts/PlayfairDisplay-Italic.ttf","fonts/Quicksand.ttf","gryffindor_logo.jpg","hagrid.gif","hufflepuff_logo.jpg","maze.jpg","ravenclaw_logo.png","slytherin_logo.png","snape.gif","vold.jpg"]),
 	mimeTypes: {".jpeg":"image/jpeg",".jpg":"image/jpeg",".png":"image/png",".ttf":"font/ttf",".gif":"image/gif"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.DQJy9I2M.js","app":"_app/immutable/entry/app.BG9CBnO0.js","imports":["_app/immutable/entry/start.DQJy9I2M.js","_app/immutable/chunks/entry.B3ZePvdp.js","_app/immutable/chunks/scheduler.C9xG8wYf.js","_app/immutable/chunks/index.U-Bm33l8.js","_app/immutable/entry/app.BG9CBnO0.js","_app/immutable/chunks/scheduler.C9xG8wYf.js","_app/immutable/chunks/index.D8nc73ia.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.C1N28NRw.js","app":"_app/immutable/entry/app.DnzSCAO6.js","imports":["_app/immutable/entry/start.C1N28NRw.js","_app/immutable/chunks/entry.CAwAGBav.js","_app/immutable/chunks/scheduler.C9xG8wYf.js","_app/immutable/chunks/index.U-Bm33l8.js","_app/immutable/entry/app.DnzSCAO6.js","_app/immutable/chunks/scheduler.C9xG8wYf.js","_app/immutable/chunks/index.D8nc73ia.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('../output/server/nodes/0.js')),
 			__memo(() => import('../output/server/nodes/1.js')),
