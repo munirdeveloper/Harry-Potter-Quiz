@@ -5,27 +5,11 @@
 	import { themeChange } from 'theme-change';
 </script>
 
-<!-- App Shell -->
+<head>
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
 <AppShell>
-	<nav class="navbar">
-		<!-- LOGO -->
-		<div class="h2">Sorting Hat Quiz</div>
-
-		<!-- NAVIGATION MENU -->
-		<ul class="nav-links">
-			<!-- USING CHECKBOX HACK -->
-			<input type="checkbox" id="checkbox_toggle" />
-			<label for="checkbox_toggle" class="hamburger">&#9776;</label>
-
-			<!-- NAVIGATION MENUS -->
-			<div class="menu">
-				<li><a href="/">Home</a></li>
-				<li><a href="/quiz">Quiz</a></li>
-				<li><a href="/houses">Houses</a></li>
-				<li><a href="/">Portfolio</a></li>
-			</div>
-		</ul>
-	</nav>
 	<!-- Page Route Content -->
 	<slot />
 	<svelte:fragment slot="footer">
@@ -55,98 +39,3 @@
 		</footer>
 	</svelte:fragment>
 </AppShell>
-
-<style>
-	/* NAVBAR STYLING STARTS */
-	.navbar {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 20px;
-		background-color: rgba(0, 0, 0, 0.7); /* Set background color with transparency */
-		backdrop-filter: blur(5px); /* Apply blur effect */
-		color: #fff;
-		position: fixed; /* Fixed position to stick to the top */
-		width: 100%; /* Full width */
-		z-index: 1000; /* Ensure it's above other content */
-	}
-
-	.nav-links a {
-		color: #fff;
-	}
-
-	/* LOGO */
-	.logo {
-		font-size: 32px;
-	}
-
-	/* NAVBAR MENU */
-	.menu {
-		display: flex;
-		gap: 1em;
-		font-size: 18px;
-	}
-
-	.menu li:hover {
-		background-color: black;
-		border-radius: 5px;
-		transition: 0.3s ease;
-	}
-
-	/* RESPONSIVE NAVBAR MENU STARTS */
-
-	/* CHECKBOX HACK */
-
-	input[type='checkbox'] {
-		display: none;
-	}
-
-	/* HAMBURGER MENU */
-	.hamburger {
-		display: none;
-		font-size: 24px;
-		user-select: none;
-		margin-top: 8px;
-	}
-
-	/* APPLYING MEDIA QUERIES */
-	@media (max-width: 768px) {
-		.menu {
-			display: none;
-			position: absolute;
-			background-color: black;
-			right: 0;
-			left: 0;
-			text-align: center;
-			padding: 0;
-			margin: 0;
-		}
-
-		.menu li:hover {
-			display: inline-block;
-			transition: 0.3s ease;
-		}
-
-		.menu li + li {
-			margin-top: 12px;
-		}
-
-		input[type='checkbox']:checked ~ .menu {
-			display: block;
-		}
-
-		.hamburger {
-			display: block;
-		}
-
-		.dropdown {
-			left: 50%;
-			top: 30px;
-			transform: translateX(35%);
-		}
-
-		.dropdown li:hover {
-			background-color: #4c9e9e;
-		}
-	}
-</style>

@@ -1,7 +1,7 @@
 <script>
 	let user_age = '';
 	let user_name = '';
-	let user_feedback = '';
+	let user_feedback = '';	
 
 	import {
 		handleSelection,
@@ -278,7 +278,6 @@
 				</div>
 			</div>
 			<div class="card p-4">
-				<!-- <form method="POST" action="?/submission"> -->
 				<form on:submit|preventDefault={handleFormSubmission} id="user_form">
 					<label class="label mb-5">
 						<span>Enter your name</span>
