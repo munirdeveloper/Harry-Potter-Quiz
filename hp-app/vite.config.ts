@@ -12,9 +12,10 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { purgeCss } from 'vite-plugin-tailwind-purgecss';
 
 export default defineConfig({
-  base: "/Harry-Potter-Quiz/", // Specify the base URL for your project (optional)
+  base: "/Harry-Potter-Quiz/",
   plugins: [
-    sveltekit(), // Use SvelteKit Vite plugin
-    purgeCss()   // Use PurgeCSS plugin for Tailwind CSS
+    sveltekit(),
+    purgeCss()
   ]
 });
+
